@@ -1,35 +1,82 @@
-/*unselected list items*/
-.tabs li {
-float:left; /*list items horizontally*/
-border:1px solid black;
-overflow:hidden; /* hide bullets */
-background:lightgray; 
+/*Karl Gentner - CF-F2-JS - CSS stylesheet for tabs & ajax fetch assignment*/
+/*Based on tabs tutorial at http://www.qualitytuts.com/simple-jquery-tabs-css-jquery/ */
+
+nav h1 {
+    font-family: helvetica;
 }
 
-/*selected list item*/
-.tabs li.selected {
-background:white; 
-} 
+/*tabs*/
+ul.tabs {
+float:left;
+list-style:none;
+height:32px;
+width:100%;
+border-radius:8px 0 -50px 0;
+margin:0;
+padding:0;
+font-family: helvetica;
+}
 
-.tabs li a {
+/*unselected list items*/
+ul.tabs li {
+float:left; /*stack items horizontally*/
+height:31px;
+line-height:31px;
+border:1px solid black;
+overflow:hidden; /* hide bullets */
+position:relative;
+background:lightgray; 
+border-top-left-radius:8px;
+border-top-right-radius:8px;
+margin:0 5px -1px 0;
+padding:0;
+}
+
+/*unselected list item anchors*/  
+ul.tabs li a {
 text-decoration:none; /*remove underline*/
 color:black;
+display:block;
+font-size:1.2em;
+border:1px solid #fff;
+outline:none;
+border-top-left-radius:8px;
+border-top-right-radius:8px;
 padding:0 20px; /*spreads out the anchor text*/
 }
 
-/*unselected list item anchors during hover*/
-.tabs li a:hover {
+/*unselected list item anchors during hover*/ 
+ul.tabs li a:hover {
 background:gray;
 }
 
-/*selected list item anchors during hover*/
-.tabs li.selected a:hover {
+/*selected list items*/ 
+ul.tabs li.selected {
 background:white;
+border-bottom:1px solid white;
 }
 
+/*selected list item anchors during hover*/ 
+ul.tabs li.selected a:hover {
+background:white;
+border-bottom:1px solid white;
+}
+ 
+/*tab output area*/ 
 .tabOutputArea {
-border:1px solid black; 
+border:1px solid black;
+overflow:hidden;
+clear:both;
 float:left; /*moves output area underneath tabs*/
-padding:0 10px;
-width:95%;
+width:100%;
+background:white;
+border-radius:8px;
+border-top-left-radius:0;
+}
+
+/*tab content*/  
+.tabContent {
+font-size: 12px;
+padding:20px;
+font-family: helvetica;
 }
